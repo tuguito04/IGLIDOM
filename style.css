@@ -1,0 +1,147 @@
+/* General */
+body {
+    background-color: #121212; /* Fondo oscuro */
+    color: #eaeaea; /* Texto claro */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease; /* Suaviza el cambio de fondo */
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #f4f4f4;
+    margin-bottom: 1rem;
+}
+
+/* Logo de equipos */
+.team-logo {
+    width: 100px; /* Tamaño del logo */
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5)); /* Sombra al logo */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Animación suave */
+}
+
+.team-logo:hover {
+    transform: scale(1.1); /* Agranda ligeramente al pasar el cursor */
+    filter: drop-shadow(0px 6px 6px rgba(255, 255, 255, 0.6));
+}
+
+/* Contenedor de la cuadrícula */
+.grid-cell {
+    background: linear-gradient(145deg, #1e1e2e, #232334); /* Degradado moderno */
+    border: 1px solid #444; /* Bordes sutiles */
+    height: 100px;
+    text-align: center;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f4f4f4;
+    border-radius: 8px; /* Bordes redondeados */
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Sombra */
+    cursor: pointer;
+}
+
+.grid-cell:hover {
+    background: linear-gradient(145deg, #2a2a3e, #292940); /* Cambio de color suave */
+    box-shadow: 0px 6px 8px rgba(255, 255, 255, 0.3);
+    transform: scale(1.05); /* Agranda ligeramente */
+}
+
+.grid-cell:active {
+    transform: scale(1); /* Animación de clic */
+    background: linear-gradient(145deg, #3a3a4e, #292930);
+}
+
+.grid-cell.correct {
+    background: linear-gradient(145deg, #28a745, #218838); /* Verde para respuestas correctas */
+    box-shadow: 0px 6px 10px rgba(0, 255, 0, 0.4); /* Sombra verde */
+    color: white;
+}
+
+.grid-cell.wrong {
+    background: linear-gradient(145deg, #dc3545, #c82333); /* Rojo para respuestas incorrectas */
+    box-shadow: 0px 6px 10px rgba(255, 0, 0, 0.4); /* Sombra roja */
+    color: white;
+}
+
+.grid-cell.answered {
+    pointer-events: none; /* Deshabilitar clics después de responder */
+}
+
+/* Botón */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* Agranda el botón al pasar el cursor */
+}
+
+button:active {
+    transform: scale(1); /* Retorna al tamaño original al hacer clic */
+}
+
+/* Centrado */
+.row.align-items-center {
+    justify-content: center;
+}
+
+/* Espaciado entre filas */
+.row.g-3 {
+    gap: 15px; /* Más espacio entre las celdas */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .team-logo {
+        width: 80px; /* Ajuste para pantallas pequeñas */
+    }
+
+    .grid-cell {
+        height: 80px; /* Cuadrícula más compacta */
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+/* Estilo del logo */
+.logo {
+    height: 80px; /* Tamaño más pequeño del logo para ajustarse bien */
+    width: auto; /* Mantener la proporción del logo */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+/* Efecto de hover */
+.logo:hover {
+    transform: scale(1.1); /* Aumentar un poco el logo al pasar el mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Sombra más grande */
+}
+
+/* Animaciones de transición suave */
+* {
+    transition: all 0.3s ease;
+}
+
+
+
+
